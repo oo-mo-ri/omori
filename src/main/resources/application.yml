@@ -1,0 +1,35 @@
+server:
+  port: 10000
+  servlet:
+    session:
+      tracking-modes: cookie
+#  tomcat:
+#    relaxed-path-chars
+
+spring:
+  datasource:
+    hikari:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/your_database_name?useSSL=false&serverTimezone=UTC
+      username: hr
+      password: hr
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+  multipart:
+    #    location: /Users/gimjin/Desktop/upload
+    enabled: true
+
+
+
